@@ -1,0 +1,18 @@
+{
+    "contents" : "#We want to run a test comparing different professors to rank them by who would be the best\n#to take courses with. \ninstall.packages(\"xlsx\")\ninstall.packages('dplyr')\nlibrary(\"xlsx\")\nlibrary(\"dplyr\")\n\n\n?xlsx\nread.xlsx()\nRahn <- read.xlsx(file = \"CompareProfessors.xlsx\", sheetName = \"Sheet2\", startRow = 1 )\nMilani <- read.xlsx(file = \"CompareProfessors.xlsx\", sheetName = \"Sheet3\", startRow = 1, colIndex = 32:39 )\nRahn\nMilani\n\nx1<-Rahn%>%filter(Question == \"Facilitation\")\nx2 <- Milani%>%filter(Description.of.course.objectives.and.assignments == \"Facilitation of learning\")\nt.test()\nx1\nx2\nprop.test(Milani$x4.004,49)\n\nqqline(Milani$X4.004, Rahn$E)\n\n#Ranks Significantly Higher on Excelence\n\nt.test(Milani$X4.004, Rahn$E)\nt.test(Milani$X3,Rahn$V)\nt.test(Milani$X2,Rahn$G)\nt.test(Rahn$F, Milani$X1)\n\n\n\nt.test(Milani$X1.1, Rahn$P)\nchisq.test(x1$(E:P), x2[x0:x1.1])\n",
+    "created" : 1460265886779.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3158705187",
+    "id" : "DBFA672C",
+    "lastKnownWriteTime" : 1460293942,
+    "path" : "~/CompareProfessors/CompareTests.R",
+    "project_path" : "CompareTests.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

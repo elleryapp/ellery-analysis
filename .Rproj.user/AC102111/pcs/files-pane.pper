@@ -1,0 +1,9 @@
+{
+    "path" : "~/CompareProfessors",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
